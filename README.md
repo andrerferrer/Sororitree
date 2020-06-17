@@ -12,7 +12,7 @@ Então, quando ocorre o [broadcast pelo JS](https://github.com/andrerferrer/Soro
 Pensando nisso, pensei como [solução estabelecer uma lógica no JS](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/javascript/channels/chatroom_channel.js) que é a seguinte:
 - Receber uma string pelo broadcast
 - Fazer o parse dela em JSON
-- descobrir qual o nickname do usuário com o qual estou conversando no momento ([Como testar?](https://github.com/andrerferrer/Sororitree/tree/chatroom-correct-design#como testar) abaixo)
+- descobrir qual o nickname do usuário com o qual estou conversando no momento ([Como testar?](https://github.com/andrerferrer/Sororitree/tree/chatroom-correct-design#como-testar) abaixo)
 - SE o nickname que veio no JSON for o nickname do ENVIADOR, insere a mensagem no DOM do browser do RECEPTOR
 
 Resumindo:
