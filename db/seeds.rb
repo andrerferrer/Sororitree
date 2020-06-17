@@ -142,3 +142,8 @@ Np = posts_content.count
   pt.save
   puts "Created #{pt.id} post"
 end
+
+####################################
+# Creating chatroom and message for testing
+Chatroom.create user: User.first, guest_user: User.last, theme: Theme.first
+Message.create content: 'Ola mundo', user: User.last, chatroom: Chatroom.last
