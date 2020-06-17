@@ -9,7 +9,7 @@ Então, quando ocorre o broadcast pelo `JS`, o RECEPTOR recebe uma view preparad
 
 ## A Solução (?)
 
-Pensando nisso, a solução para mim foi estabelecer uma lógica no [JS](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/javascript/channels/chatroom_channel.js) que é a seguinte:
+Pensando nisso, pensei como [solução estabelecer uma lógica no JS](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/javascript/channels/chatroom_channel.js) que é a seguinte:
 - Receber uma string pelo broadcast
 - Fazer o parse dela em JSON
 - descobrir qual o nickname do usuário com o qual estou conversando no momento (`como-testar-1` abaixo)
