@@ -65,3 +65,5 @@ Envie uma mensagem de uma para outra.
 
 Após o setup prévio, para ver o erro basta um 
 `git checkout 5ea2e2ff2780bd5b9b37a8cb81c420f121229aa9`
+
+[Video mostrando o erro (ficou bem ruim)](https://imgur.com/0pu8Nv9)
