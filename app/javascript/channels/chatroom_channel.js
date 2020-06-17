@@ -14,8 +14,12 @@ const initChatroomCable = () => {
     const id = messagesContainer.dataset.chatroomId;
     consumer.subscriptions.create({ channel: "ChatroomChannel", id: id }, {
       received(data) {
-        messagesContainer.insertAdjacentHTML('beforeend', data);
-        scrollLastMessageIntoView();
+        data = JSON.parse(data)
+        const guestNickname = document.querySelector('.chat-title').innerText;
+        if (guestNickname === data.senderNickname) {
+          messagesContainer.insertAdjacentHTML('beforeend', data.message);
+          scrollLastMessageIntoView();
+        };
       },
     });
   }
