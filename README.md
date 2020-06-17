@@ -15,9 +15,20 @@ Pensando nisso, pensei como [solução estabelecer uma lógica no JS](https://gi
 - descobrir qual o nickname do usuário com o qual estou conversando no momento (`como-testar-1` abaixo)
 - SE o nickname que veio no JSON for o nickname do ENVIADOR, insere a mensagem no DOM do browser do RECEPTOR
 
+Resumindo:
+O [controller](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/controllers/messages_controller.rb) faz um render do [JSON](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/views/messages/_message_broadcasted.json.erb) que, por sua vez, renderiza um [HTML.ERB](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/views/messages/_message_broadcasted.html.erb).
+
+Esse JSON é recebido como uma string no channel e o broadcast é recebido seguindo [essa lógica](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/javascript/channels/chatroom_channel.js).
+
 ## Os problemas (caveats)
 
+## Etc
 
+### Casos similares
+
+Só achei esse, não resolvido
+
+- https://www.reddit.com/r/rails/comments/5nquwr/rails_action_cable_and_current_user/
 
 ### como-testar-1
 ```
