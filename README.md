@@ -5,7 +5,7 @@ Para facilitar, chamarei os usuários de ENVIADOR e RECEPTOR.
 
 O problema é que quando ocorre o render da mensagem, o current_user na [view](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/views/messages/_message.html.erb) é o ENVIADOR.
 
-Então, quando ocorre o broadcast pelo `JS`, o RECEPTOR recebe uma view preparada para o ENVIADOR.
+Então, quando ocorre o [broadcast pelo JS](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/javascript/channels/chatroom_channel.js), o RECEPTOR recebe uma view preparada para o ENVIADOR. Então os estilos ficam estranhos até o usuário fazer um reload na página.
 
 ## A Solução (?)
 
