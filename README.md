@@ -20,7 +20,7 @@ O [controller](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-
 
 Esse JSON é recebido como uma string no channel e o broadcast é recebido seguindo [essa lógica](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/javascript/channels/chatroom_channel.js).
 
-## Problemas (a ser resolvido)
+## Os Problemas (a serem resolvidos)
 
 Fazer o `JSON.parse()` no [chatroom_channel.js](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/javascript/channels/chatroom_channel.js) se revelou muito complicado porque qualquer pequena alteração no HTML faz esse parse quebrar.
 
@@ -32,6 +32,7 @@ e.g.
     - enviar "hello world" no chat nao quebra;
     - enviar "hello \n world", quebra
 
+Haveria um jeito melhor de resolver esse desafio? 🤔
 
 ## Como testar
 
