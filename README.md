@@ -20,7 +20,18 @@ O [controller](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-
 
 Esse JSON é recebido como uma string no channel e o broadcast é recebido seguindo [essa lógica](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/javascript/channels/chatroom_channel.js).
 
-## Os problemas (caveats)
+## Problemas (a ser resolvido)
+
+Fazer o `JSON.parse()` no [chatroom_channel.js](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/javascript/channels/chatroom_channel.js) se revelou muito complicado porque qualquer pequena alteração no HTML faz esse parse quebrar.
+
+e.g.
+
+No app/views/messages/_message_broadcasted.html.erb, precisamos usar single quotes para HTML attributes (class, id etc) ou o `JSON.parse()` quebra.
+
+Além disso, se a mensagem for escrita em uma linha, o parse funciona. Se escrita em duas, o parse quebra:
+- enviar "hello world" no chat nao quebra;
+- enviar "hello \n world", quebra
+
 
 ## Etc
 
