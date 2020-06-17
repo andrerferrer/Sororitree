@@ -1,4 +1,10 @@
 {
   "senderNickname": "<%= current_user.nickname %>",
-  "message":  "<div class='message-container d-flex justify-content-end'> <div class='message-guest' id='message-<%= message.id %>'> <div class='py-1 px-3'> <div class='author'>  <small> <%= message.created_at.strftime('%b %e às %H:%M') %> </small> <span> <%= message.user.nickname %> </span>  </div>  <div>  <p> <%= message.content %> </p>  </div>  </div>  </div>  </div>"
+  "message":  "<%= render('message_broadcasted', message: message).gsub("\n", " ").html_safe %>"
 }
+
+<%# Message still breaks if we write it in two lines %>
+<%# e.g.: 
+  "Hello, world" will not break;
+  "Hello
+  World" will %>
