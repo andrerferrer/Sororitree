@@ -28,3 +28,6 @@ rails s
 ```
 
 Acesse `http://localhost:3000/chatrooms/1` com o login `Alexia`/`123456`
+Acesse `http://localhost:3000/chatrooms/1` em uma aba anônima com o login `Fabiola`/`123456`
+
+Envie uma mensagem de uma para outra.
