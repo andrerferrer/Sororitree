@@ -26,7 +26,7 @@ Fazer o `JSON.parse()` no [chatroom_channel.js](https://github.com/andrerferrer/
 
 e.g.
 
-No app/views/messages/_message_broadcasted.html.erb, precisamos usar single quotes para HTML attributes (class, id etc) ou o `JSON.parse()` quebra.
+No [partial view da mensagem](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/views/messages/_message_broadcasted.html.erb), precisamos usar _single quotes_ para HTML attributes (class, id etc) ou o `JSON.parse()` quebra.
 
 Além disso, se a mensagem for escrita em uma linha, o parse funciona. Se escrita em duas, o parse quebra:
 - enviar "hello world" no chat nao quebra;
@@ -42,6 +42,12 @@ Só achei esse, não resolvido
 - https://www.reddit.com/r/rails/comments/5nquwr/rails_action_cable_and_current_user/
 
 ### como-testar-1
+Clone esse repo e vá para a branch `chatroom-correct-design`
+```
+git clone git@github.com:andrerferrer/Sororitree.git
+git checkout chatroom-correct-design
+```
+
 ```
 bundle install
 yarn install
