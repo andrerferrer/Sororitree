@@ -26,11 +26,11 @@ Fazer o `JSON.parse()` no [chatroom_channel.js](https://github.com/andrerferrer/
 
 e.g.
 
-No [partial view da mensagem](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/views/messages/_message_broadcasted.html.erb), precisamos usar _single quotes_ para HTML attributes (class, id etc) ou o `JSON.parse()` quebra.
+1. No [partial view da mensagem](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/views/messages/_message_broadcasted.html.erb), precisamos usar _single quotes_ para HTML attributes (class, id etc) ou o `JSON.parse()` quebra.
 
-Além disso, se a mensagem for escrita em uma linha, o parse funciona. Se escrita em duas, o parse quebra:
-- enviar "hello world" no chat nao quebra;
-- enviar "hello \n world", quebra
+2. Além disso, se a mensagem for escrita em uma linha, o parse funciona. Se escrita em duas, o parse quebra:
+    - enviar "hello world" no chat nao quebra;
+    - enviar "hello \n world", quebra
 
 
 ## Etc
