@@ -12,7 +12,7 @@ Então, quando ocorre o [broadcast pelo JS](https://github.com/andrerferrer/Soro
 Pensando nisso, pensei como [solução estabelecer uma lógica no JS](https://github.com/andrerferrer/Sororitree/blob/chatroom-correct-design/app/javascript/channels/chatroom_channel.js) que é a seguinte:
 - Receber uma string pelo broadcast
 - Fazer o parse dela em JSON
-- descobrir qual o nickname do usuário com o qual estou conversando no momento (`como-testar-1` abaixo)
+- descobrir qual o nickname do usuário com o qual estou conversando no momento ([Como testar?](https://github.com/andrerferrer/Sororitree/tree/chatroom-correct-design#como testar) abaixo)
 - SE o nickname que veio no JSON for o nickname do ENVIADOR, insere a mensagem no DOM do browser do RECEPTOR
 
 Resumindo:
@@ -33,14 +33,7 @@ e.g.
     - enviar "hello \n world", quebra
 
 
-## Etc
-
-### Casos similares
-
-Só achei esse, não resolvido
-
-- https://www.reddit.com/r/rails/comments/5nquwr/rails_action_cable_and_current_user/
-
+## Como testar
 
 ### Como testar a solução?
 Clone esse repo e vá para a branch `chatroom-correct-design`
@@ -67,3 +60,10 @@ Após o setup prévio, para ver o erro basta um
 `git checkout 5ea2e2ff2780bd5b9b37a8cb81c420f121229aa9`
 
 [Video mostrando o erro (ficou bem ruim)](https://imgur.com/0pu8Nv9)
+
+
+## Casos similares
+
+Só achei esse, não resolvido
+
+- https://www.reddit.com/r/rails/comments/5nquwr/rails_action_cable_and_current_user/
